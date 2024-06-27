@@ -6,30 +6,42 @@ Welcome to TWIXTER Microblog. This project aims to provide a simple and user-fri
 
 ## Authors
 
-- [rohan pokwal](https://github.com/rohanpokwal/enjoy_the_outdoors_capstone)
+- [rohan pokwal](https://github.com/rohanpokwal/microbloglite-capstone-starter)
 
 ## Screenshots
 
-Home Page
-![App Screenshot](/otherImages/home-page.png)
-National Parks Page
-![App Screenshot](/otherImages/national-park-page.png)
-![App Screenshot](/otherImages/byprktype.png)
-Mountains Page
-![App Screenshot](/otherImages/mountains-page.png)
+Registration Page
+![App Screenshot](/images/register.png)
+Login Page
+![App Screenshot](/images/login.png)
+Post Page
+![App Screenshot](/images/post.png)
+Profile Page
+![App Screenshot](/images/profile.png)
 
 ## Features
 
-- Home Page: The Home Page introduces users to our mission, featuring various videos that showcase the beauty and significance of national parks. There is also a donation section where users can contribute to their favorite national park.
-- National Parks: This page allows users to search for national parks based on location or park type. The search results are displayed in a table format, providing essential information about each park.
-- Mountains: Users can select their favorite mountain in the United States from a dropdown menu. Upon selection, a card is displayed containing an image of the mountain, its name, a description, and key details such as its longitude, latitude, sunrise time, and sunset time.
+- Registration Page: Create an account by providing your username, full name, and password.
+- Login Page: Log in securely with your credentials to access your Twixter account.
+- Post Page: Browse and read all posts created by other Twixter users.
+- Profile Page: Share your own thoughts by creating new posts directly from your profile page.
+
+## Technologies Used
+
+- Frontend: HTML, CSS, JavaScript, Bootstrap
+- Backend: microblog Apis
+
+## Usage
+
+- Register a new account or log in with your existing credentials.
+- Start creating and viewing posts!
 
 ## Installation
 
 Install my-project with git
 
 ```bash
-  git clone https://github.com/rohanpokwal/enjoy_the_outdoors_capstone
+  git clone https://github.com/rohanpokwal/microbloglite-capstone-starter
   open your project in your preferred code editor
 
 ```
