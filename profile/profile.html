@@ -1,31 +1,21 @@
-<!-- POSTS page -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile</title>
 
     <!-- Bootstrap CSS -->
+    <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      crossorigin="anonymous"
-    ></script>
-
     <!-- Global CSS (CSS rules you want applied to all pages) -->
     <link rel="stylesheet" href="../global.css" />
-
-    <!-- Page-specific CSS -->
-    <link rel="stylesheet" href="./posts.css" />
-
-    <title>/POSTS</title>
+    <link rel="stylesheet" href="/profile/profile.css" />
 
     <!-- Run BEFORE page is finished loading (before window.onload): -->
     <script src="../auth.js"></script>
@@ -63,8 +53,8 @@
               <a
                 class="nav-link active"
                 aria-current="page"
-                href="/profile/profile.html"
-                >Profile</a
+                href="/posts/index.html"
+                >Posts</a
               >
             </li>
           </ul>
@@ -77,25 +67,45 @@
       </div>
     </nav>
 
-    <!-- this is going to be the container for a post -->
-
-    <div class="container my-4">
-      <div class="text-center mb-4">
-        <h2 class="display-4">Discover What's Happening!</h2>
-        <p class="lead">Check out the latest posts from our community.</p>
-      </div>
-      <div class="text-center"><h3>Community Posts</h3></div>
-    </div>
-
-    <!-- Display message to User -->
-    <div>
-      <div class="container mt-5">
-        <div id="postsContainer" class="mt-4"></div>
+    <!-- profile stuffs -->
+    <div class="tocenter mt-3">
+      <div class="profile-container mb-3">
+        <img
+          src="/images/profile-pic.jpeg"
+          alt="Profile Picture"
+          class="img-fluid mb-3"
+        />
+        <h4 id="greeting"></h4>
       </div>
     </div>
+    <!-- this is the container for user to add text -->
+    <div class="container text-center">
+      <form id="createAPostForm" class="mb-3">
+        <div class="mb-3">
+          <p class="text-light fs-5">
+            We hope you're having a fantastic day. What would you like to share
+            with the world today?
+          </p>
+          <textarea
+            name="text"
+            id="text"
+            class="form-control border border-primary"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Create a post</button>
+      </form>
+      <div id="postsContainer"></div>
+      <div class="text-light fs-6" id="confirmationMessage"></div>
+    </div>
 
-    <!-- Page-specific code -->
-    <script src="./posts.js"></script>
-    <!-- <script src="/auth.js"></script> -->
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/profile/profile.js"></script>
   </body>
 </html>

@@ -1,58 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Global CSS (CSS rules you want applied to all pages) -->
-    <link rel="stylesheet" href="./global.css">
+    <link rel="stylesheet" href="./global.css" />
 
     <!-- Page-specific CSS -->
-    <link rel="stylesheet" href="./landing.css">
+    <link rel="stylesheet" href="./landing.css" />
 
     <title>Login to the Microblog Network!</title>
 
     <!-- Run BEFORE page is finished loading (before window.onload - don't add the `defer` attribute): -->
     <script src="./auth.js"></script>
     <script>
-        if (isLoggedIn() === true) window.location.replace("/posts");
+      if (isLoggedIn() === true) window.location.replace("/posts");
     </script>
-</head>
-<body>
-
-    <header>
-        <h1>Welcome to <code>YOUR MICROBLOG NETWORK</code></h1>
+  </head>
+  <body>
+    <header class="d-flex justify-content-center align-items-center my-5">
+      <img src="images/logo-img-2.webp" alt="Logo" class="header-logo" />
+      <h1>
+        <code>TWI<span class="x">X</span>TER</code>
+      </h1>
+    </header>
+    <header class="d-flex justify-content-center align-items-center my-5">
+      <h2 class="text-primary">Welcome!</h2>
     </header>
 
     <main>
-
-        <form id="login">
-            <div>
-                <label for="username">Username</label>
-                <input type="text" id="username" minlength="3">
+      <!-- this is login form -->
+      <div class="container">
+        <div class="login-form">
+          <form id="login">
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                minlength="3"
+                required
+              />
             </div>
-
-            <div>
-                <label for="password">Password</label>
-                <input type="password" id="password" minlength="6">
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                minlength="6"
+                required
+              />
             </div>
+            <button
+              id="loginButton"
+              type="submit"
+              class="btn btn-primary w-100"
+            >
+              Login
+            </button>
+            <p class="text-center mt-3">
+              Don't have an account? <a href="register.html">Register</a>
+            </p>
+          </form>
+        </div>
 
-            <button id="loginButton" type="submit">Login</button>
-        </form>
-
+        <!-- this is the card from bootstrap which will describe the application -->
+        <!-- first card -->
+        <div class="row my-5">
+          <div class="col-md-4 mb-3">
+            <div class="card card-custom">
+              <div class="card-body">
+                <h5 class="card-title">Connect Instantly</h5>
+                <p class="card-text">
+                  Join a vibrant community and share your thoughts with the
+                  world in real-time.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card card-custom">
+              <div class="card-body">
+                <h5 class="card-title">Stay Updated</h5>
+                <p class="card-text">
+                  Never miss out on trending topics and updates from your
+                  favorite people.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card card-custom">
+              <div class="card-body">
+                <h5 class="card-title">Simple and Fast</h5>
+                <p class="card-text">
+                  Create and explore posts effortlessly with our user-friendly
+                  interface.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <footer></footer>
+    <footer class="text-center my-4 fixed-bottom text-primary">
+      <p>&copy; 2024 Your Microblog Network</p>
+    </footer>
 
     <!-- Page-specific code -->
     <script src="./landing.js"></script>
-</body>
+  </body>
 </html>
