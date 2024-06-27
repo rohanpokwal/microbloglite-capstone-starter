@@ -1,6 +1,6 @@
 /* Landing Page CSS */
 body {
-  background: url("/images/hero-image1.jpg") no-repeat center center fixed;
+  background: url("./images/hero-image1.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 .login-form {
